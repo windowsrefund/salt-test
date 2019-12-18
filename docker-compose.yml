@@ -1,0 +1,10 @@
+version: '3'
+services:
+  master:
+    image: 'datica/salt-master'
+  minion1:
+    image: 'datica/salt-minion'
+  minion2:
+    image: 'datica/salt-minion'
+  minion3:
+    image: 'datica/salt-minion'
