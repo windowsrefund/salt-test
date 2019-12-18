@@ -1,7 +1,9 @@
 # salt-test
-1 salt master and 3 minions
+1 salt master with 3 minions
 
-## master configuration
+`docker-compose -d up`
+
+### master configuration
   - auto_accept: True
 
 
