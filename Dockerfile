@@ -1,0 +1,2 @@
+FROM datica/salt-master
+

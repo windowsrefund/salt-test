@@ -1,7 +1,7 @@
 version: '3'
 services:
-  master:
-    image: 'datica/salt-master'
+  salt:
+    image: 'datica/salt-master:auto_accept_true'
   minion1:
     image: 'datica/salt-minion'
   minion2:
