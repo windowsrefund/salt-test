@@ -1,0 +1,2 @@
+FROM datica/salt-minion
+COPY minion2.minion_id /etc/salt/minion_id
