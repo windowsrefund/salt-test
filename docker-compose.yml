@@ -1,25 +1,20 @@
 version: '3.2'
 services:
   salt:
-    build:
-      context: .
-      dockerfile: Dockerfile.master
-    image: datica/salt-master:file_roots
+    image: datica/salt-master
     volumes:
+      - ./configs/master:/etc/salt/master
       - ./salt:/usr/local/salt
   minion1:
-    build:
-      context: .
-      dockerfile: Dockerfile.minion1
-    image: datica/salt-minion:minion1
+    volumes:
+      - ./configs/minion1.minion_id:/etc/salt/minion_id
+    image: datica/salt-minion
   minion2:
-    build:
-      context: .
-      dockerfile: Dockerfile.minion2
-    image: datica/salt-minion:minion2
+    volumes:
+      - ./configs/minion2.minion_id:/etc/salt/minion_id
+    image: datica/salt-minion
   minion3:
-    build:
-      context: .
-      dockerfile: Dockerfile.minion3
-    image: datica/salt-minion:minion3
+    volumes:
+      - ./configs/minion3.minion_id:/etc/salt/minion_id
+    image: datica/salt-minion
 
