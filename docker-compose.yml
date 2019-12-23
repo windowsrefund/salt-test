@@ -4,9 +4,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.master
-    image: datica/salt-master:auto_accept_true
+    image: datica/salt-master:file_roots
     volumes:
-      - ./salt:/salt:ro
+      - ./salt:/usr/local/salt
   minion1:
     build:
       context: .
