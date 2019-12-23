@@ -1,22 +1,25 @@
-version: '3'
+version: '3.2'
 services:
   salt:
     build:
       context: .
       dockerfile: Dockerfile.master
-    image: 'datica/salt-master:auto_accept_true'
+    image: datica/salt-master:auto_accept_true
+    volumes:
+      - ./salt:/salt:ro
   minion1:
     build:
       context: .
       dockerfile: Dockerfile.minion1
-    image: 'datica/salt-minion:minion1'
+    image: datica/salt-minion:minion1
   minion2:
     build:
       context: .
       dockerfile: Dockerfile.minion2
-    image: 'datica/salt-minion:minion2'
+    image: datica/salt-minion:minion2
   minion3:
     build:
       context: .
       dockerfile: Dockerfile.minion3
-    image: 'datica/salt-minion:minion3'
+    image: datica/salt-minion:minion3
+
