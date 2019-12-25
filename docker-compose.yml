@@ -4,6 +4,7 @@ services:
     image: datica/salt-master
     volumes:
       - ./configs/master:/etc/salt/master
+      - ./configs/salt.bash:/etc/bash_completion.d/salt.bash
       - ./salt:/usr/local/salt
       - ./pillar:/usr/local/pillar
   minion1:
